@@ -40,8 +40,6 @@ class Order(CreateMixin, UpdateMixin):
         "ShippingMethod",
         on_delete=models.PROTECT,
         related_name="order_shipping_methods",
-        blank=True, # TODO, when clean migration we remove field blank and null
-        null=True
     )
     is_active = models.BooleanField(default=True)
     # items_data = models.JSONField(blank=True, null=True)

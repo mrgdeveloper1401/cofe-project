@@ -21,12 +21,19 @@ class UpdateMixin(models.Model):
         abstract = True
 
 
-class Image(CreateMixin, UpdateMixin):
+class Media(CreateMixin, UpdateMixin):
+    MEDIA_TYPE = [
+        ("image", "تصویر"),
+        ("video", "ویدیو"),
+    ]
     # File & metadata
+    user = models.ForeignKey("account_app.User", on_delete=models.PROTECT, related_name="user_media")
+    file_type = models.CharField(max_length=10, choices=MEDIA_TYPE)
     image  = models.ImageField(
         upload_to='images/%Y/%m/%d/',
         help_text=_('Upload the original image file.'),
     )
+    obj_file = models.FileField(upload_to="upload/file/%Y/%m/%d")
     image_id_ba_salam = models.BigIntegerField(
         blank=True,
         null=True,

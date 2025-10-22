@@ -1,3 +1,15 @@
 from django.contrib import admin
+from .models import (
+    SupportTicket,
+    TicketMessage
+)
 
-# Register your models here.
+
+@admin.register(SupportTicket)
+class SupportTicketAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(TicketMessage)
+class TicketMessageAdmin(admin.ModelAdmin):
+    pass

@@ -33,9 +33,9 @@ class User(AbstractBaseUser, PermissionsMixin, UpdateMixin, CreateMixin):
     first_name = models.CharField(_("first name"), max_length=150, blank=True, null=True)
     last_name = models.CharField(_("last name"), max_length=150, blank=True, null=True)
     profile_image = models.ForeignKey(
-        "core_app.Image",
+        "core_app.Media",
         on_delete=models.PROTECT,
-        related_name="profile_image",
+        related_name="profile_media",
         blank=True,
         null=True,
     )

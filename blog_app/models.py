@@ -33,10 +33,10 @@ class PostBlog(CreateMixin, UpdateMixin):
     post_slug = models.SlugField(max_length=500, allow_unicode=True)
     post_body = CKEditor5Field(config_name='extends')
     read_time = models.PositiveSmallIntegerField()
-    post_cover_image = models.ForeignKey(
-        "core_app.Image",
+    post_cover_media = models.ForeignKey(
+        "core_app.Media",
         on_delete=models.PROTECT,
-        related_name="blog_posts_cover_image",
+        related_name="blog_posts_cover_media",
     )
     tags = models.ManyToManyField("TagBlog", blank=True, related_name="post_tags")
     likes = models.PositiveIntegerField(default=0)

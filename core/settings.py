@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # package
     'treebeard',
     "django_ckeditor_5",
+    "django_json_widget"
 ]
 
 MIDDLEWARE = [

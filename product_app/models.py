@@ -9,7 +9,7 @@ class Category(MP_Node, CreateMixin, UpdateMixin):
     name = models.CharField(max_length=150)
     slug = models.SlugField(unique=True)
     description = models.TextField(blank=True, null=True)
-    image = models.ForeignKey("core_app.Image", verbose_name=_("image"), on_delete=models.PROTECT, related_name="category_images")
+    category_media = models.ForeignKey("core_app.Media", verbose_name=_("media"), on_delete=models.PROTECT, related_name="category_medias", null=True)
     is_active = models.BooleanField(_("is active"), default=True)
 
     class Meta:
@@ -23,7 +23,7 @@ class Vendor(CreateMixin, UpdateMixin):
     user = models.OneToOneField("account_app.User", on_delete=models.PROTECT)
     shop_name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    logo = models.ForeignKey("core_app.Image", verbose_name=_("image"), on_delete=models.PROTECT, related_name="vendor_images")
+    logo = models.ForeignKey("core_app.Media", verbose_name=_("media"), on_delete=models.PROTECT, related_name="vendor_medias")
     is_active = models.BooleanField(default=True)
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=0)
 
@@ -88,13 +88,8 @@ class ProductAttributeValue(models.Model):
 
 
 class ProductMedia(models.Model):
-    MEDIA_TYPE = [
-        ("image", "تصویر"),
-        ("video", "ویدیو"),
-    ]
     product = models.ForeignKey(Product, on_delete=models.PROTECT, related_name="media")
-    product_file = models.FileField(upload_to="product_media/")
-    product_type = models.CharField(max_length=10, choices=MEDIA_TYPE)
+    product_file = models.ForeignKey("core_app.Media", on_delete=models.PROTECT, related_name="product_medias")
     is_active = models.BooleanField(_("is active"), default=True)
 
     class Meta:
