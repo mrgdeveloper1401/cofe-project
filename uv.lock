@@ -193,12 +193,14 @@ dependencies = [
     { name = "boto3" },
     { name = "celery", extra = ["redis"] },
     { name = "django" },
+    { name = "django-ckeditor-5" },
     { name = "django-cors-headers" },
     { name = "django-csp" },
     { name = "django-extensions" },
     { name = "django-filter" },
     { name = "django-health-check" },
     { name = "django-import-export" },
+    { name = "django-mptt" },
     { name = "django-ratelimit" },
     { name = "django-redis" },
     { name = "django-robots" },
@@ -236,12 +238,14 @@ requires-dist = [
     { name = "boto3", specifier = ">=1.40.56" },
     { name = "celery", extras = ["redis"], specifier = ">=5.5.3" },
     { name = "django", specifier = ">=5.2.7" },
+    { name = "django-ckeditor-5", specifier = ">=0.2.18" },
     { name = "django-cors-headers", specifier = ">=4.9.0" },
     { name = "django-csp", specifier = ">=4.0" },
     { name = "django-extensions", specifier = ">=4.1" },
     { name = "django-filter", specifier = ">=25.2" },
     { name = "django-health-check", specifier = ">=3.20.0" },
     { name = "django-import-export", specifier = ">=4.3.12" },
+    { name = "django-mptt", specifier = ">=0.18.0" },
     { name = "django-ratelimit", specifier = ">=4.1.0" },
     { name = "django-redis", specifier = ">=6.0.0" },
     { name = "django-robots", specifier = ">=6.1" },
@@ -304,6 +308,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b1/96/bd84e2bb997994de8bcda47ae4560991084e86536541d7214393880f01a8/django-5.2.7.tar.gz", hash = "sha256:e0f6f12e2551b1716a95a63a1366ca91bbcd7be059862c1b18f989b1da356cdd", size = 10865812, upload-time = "2025-10-01T14:22:12.081Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8f/ef/81f3372b5dd35d8d354321155d1a38894b2b766f576d0abffac4d8ae78d9/django-5.2.7-py3-none-any.whl", hash = "sha256:59a13a6515f787dec9d97a0438cd2efac78c8aca1c80025244b0fe507fe0754b", size = 8307145, upload-time = "2025-10-01T14:22:49.476Z" },
+]
+
+[[package]]
+name = "django-ckeditor-5"
+version = "0.2.18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "pillow" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/17/c0/2ddd9b6b5b62f37f24e470684b5cc5494de2504ce00d6e803f3005fdebbc/django_ckeditor_5-0.2.18.tar.gz", hash = "sha256:08270b1dd8d1b5c27c5a2023ec8f920e2ec0c7d2afa0113af765f0de53947d35", size = 2630309, upload-time = "2025-05-09T15:54:38.668Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/46/e1/c4a02822e86e733cbb5f4c8c2d881bd16cd0a251780e34aff16d2ea82008/django_ckeditor_5-0.2.18-py3-none-any.whl", hash = "sha256:155d14bed6688791026486c191dd82dbc2937d6a588079989d5bd89708de8463", size = 2726759, upload-time = "2025-05-09T15:54:35.281Z" },
 ]
 
 [[package]]
@@ -393,6 +410,30 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/15/55/b00b554e72cd0f56ec2692b32ff255fc625040f9405f7a9f46f1b0e926e9/django_import_export-4.3.12.tar.gz", hash = "sha256:708658647b232d16b9a0db0a5cfc07215eacd514fe8c30deb00da50e2e557c23", size = 2232592, upload-time = "2025-10-19T18:22:51.085Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fa/27/09ee5a876555a850697813923971bfbc43551afc630332e918ddc321277c/django_import_export-4.3.12-py3-none-any.whl", hash = "sha256:78dd7ca363d1816dcb2f4ca47ed118f17cce7e668bd6c216207d9cf8c9b1c079", size = 150937, upload-time = "2025-10-19T18:22:49.327Z" },
+]
+
+[[package]]
+name = "django-js-asset"
+version = "3.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e6/91/c63f136f553ec24fc46ccf20ac7292a8df04815b383975b6f3f7f0060217/django_js_asset-3.1.2.tar.gz", hash = "sha256:1fc7584199ed1941ed7c8e7b87ca5524bb0f2ba941561d2a104e88ee9f07bedd", size = 9471, upload-time = "2025-03-04T15:22:49.789Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a6/cf/b208767db5e56b5189829f753eec6a14ee75d074922dc2bd19220b22a34d/django_js_asset-3.1.2-py3-none-any.whl", hash = "sha256:b5ffe376aebbd73b7af886d675ac9f43ca63b39540190fa8409c9f8e79145f68", size = 5905, upload-time = "2025-03-04T15:22:51.152Z" },
+]
+
+[[package]]
+name = "django-mptt"
+version = "0.18.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django-js-asset" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/eb/25/04bb8e4384f3484dabbd0e2a84946f1c972b95b07512509a17aaa361be0f/django_mptt-0.18.0.tar.gz", hash = "sha256:cf5661357ff22bc64e20d3341c26e538aa54583aea0763cfe6aaec0ab8e3a8ee", size = 71407, upload-time = "2025-08-26T09:27:01.05Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/51/9e/78aad58a90f2e4d0c898eeadd2f2b720bcae29b43676dd37c2b627c4c6c6/django_mptt-0.18.0-py3-none-any.whl", hash = "sha256:bfa3f01627e3966a1df901aeca74570a3e933e66809ebf58d9df673e63627afb", size = 120157, upload-time = "2025-08-26T09:27:02.168Z" },
 ]
 
 [[package]]
