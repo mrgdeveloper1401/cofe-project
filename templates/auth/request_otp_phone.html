@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% block title %}
+{% load static %}
+<title>ورود به حساب کاربری</title>
+{% endblock %} {% block content %}
+<div class="wrapper">
+  <!-- Start main-content -->
+  <main class="main-content dt-sl mt-4 mb-3">
+    <div class="container main-container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-5 col-md-7 col-12 mx-auto">
+          <div class="logo-area text-center mb-3">
+            <a href="#"
+              ><img src='{% static "assets/img/logo.png" %}' class="img-fluid" alt="logo"
+            /></a>
+          </div>
+          <div class="auth-wrapper form-ui border pt-4">
+            <div class="section-title title-wide mb-1 no-after-title-wide">
+              <h2 class="font-weight-bold">ورود</h2>
+            </div>
+            {% comment %} <div class="message-light">
+              اگر قبلا با ایمیل ثبت‌نام کرده‌اید، نیاز به ثبت‌نام مجدد با شماره
+              همراه ندارید
+            </div> {% endcomment %}
+            <form action="#">
+              <div class="form-row-title">
+                <h3> شماره موبایل</h3>
+              </div>
+              <div class="form-row with-icon">
+                <input
+                  type="text"
+                  class="input-ui pr-2"
+                  placeholder="شماره موبایل خود را وارد نمایید"
+                />
+                <i class="mdi mdi-account-circle-outline"></i>
+              </div>
+              {% comment %} <div class="form-row-title">
+                <h3>رمز عبور</h3>
+              </div> {% endcomment %}
+              {% comment %} <div class="form-row with-icon">
+                <input
+                  type="password"
+                  class="input-ui pr-2"
+                  placeholder="رمز عبور خود را وارد نمایید"
+                />
+                <i class="mdi mdi-lock-open-variant-outline"></i>
+              </div> {% endcomment %}
+              {% comment %} <div class="form-row mt-2">
+                <div class="custom-control custom-checkbox float-right mt-2">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="customCheck3"
+                  />
+                  <label
+                    class="custom-control-label text-justify"
+                    for="customCheck3"
+                  >
+                    <a href="#">حریم خصوصی</a> و
+                    <a href="#">شرایط و قوانین</a> استفاده از سرویس های سایت
+                    دیدیکالا را مطالعه نموده و با کلیه موارد آن موافقم.
+                  </label>
+                </div>
+              </div> {% endcomment %}
+              <div class="form-row mt-3">
+                <button class="btn-primary-cm btn-with-icon mx-auto w-100">
+                  <i class="mdi mdi-account-circle-outline"></i>
+                  ارسال کد
+                </button>
+              </div>
+            </form>
+            <div class="form-footer mt-3">
+              <div>
+                {% comment %} <span class="font-weight-bold">قبلا ثبت نام کرده اید؟</span> {% endcomment %}
+                <a href="{% url 'auth_app:login_by_password' %}" class="mr-3 mt-2">ورود با استفاده از پسورد</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- End main-content -->
+  <!-- Start mini-footer -->
+  {% comment %} <footer class="mini-footer dt-sl">
+    <div class="container main-container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="mini-footer-menu">
+            <li><a href="#">درباره دیدیکالا</a></li>
+            <li><a href="#">فرصت های شغلی</a></li>
+            <li><a href="#">تماس با ما</a></li>
+            <li><a href="#">همکاری با سازمان ها</a></li>
+          </ul>
+        </div>
+        <div class="col-12 mt-2 mb-3">
+          <div class="footer-light-text">
+            استفاده از مطالب فروشگاه اینترنتی دیدیکالا فقط برای مقاصد غیرتجاری و
+            با ذکر منبع بلامانع است. کلیه حقوق این سایت متعلق به (فروشگاه آنلاین
+            دیدیکالا) می‌باشد.
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <div class="copy-right-mini-footer">Copyright © 2019 Didikala</div>
+        </div>
+      </div>
+    </div>
+  </footer> {% endcomment %}
+  <!-- End mini-footer -->
+</div>
+{% endblock %}
