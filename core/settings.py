@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from decouple import config, Csv
 import datetime
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -156,19 +157,19 @@ REST_FRAMEWORK = {
 
 # config JWT settings
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(days=30),
-    "REFRESH_TOKEN_LIFETIME": datetime.timedelta(days=30),
+    # "ACCESS_TOKEN_LIFETIME": datetime.timedelta(minutes=),
+    # "REFRESH_TOKEN_LIFETIME": datetime.timedelta(days=30),
     "ROTATE_REFRESH_TOKENS": True,
     "BLACKLIST_AFTER_ROTATION": True,
-    "UPDATE_LAST_LOGIN": False,
+    "UPDATE_LAST_LOGIN": True,
 
-    "ALGORITHM": "HS256",
-    "VERIFYING_KEY": "",
-    "AUDIENCE": None,
-    "ISSUER": None,
-    "JSON_ENCODER": None,
-    "JWK_URL": None,
-    "LEEWAY": 0,
+    # "ALGORITHM": "HS256",
+    # "VERIFYING_KEY": "",
+    # "AUDIENCE": None,
+    # "ISSUER": None,
+    # "JSON_ENCODER": None,
+    # "JWK_URL": None,
+    # "LEEWAY": 0,
 
     "AUTH_HEADER_TYPES": ("Bearer",),
     "AUTH_HEADER_NAME": "HTTP_AUTHORIZATION",

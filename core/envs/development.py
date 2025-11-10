@@ -23,7 +23,15 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 CKEDITOR_5_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 
 SIMPLE_JWT["SIGNING_KEY"] = SECRET_KEY
-
+SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'] = datetime.timedelta(days=30)
+SIMPLE_JWT['REFRESH_TOKEN_LIFETIME'] = datetime.timedelta(days=30)
+SIMPLE_JWT['VERIFYING_KEY'] = ""
+SIMPLE_JWT['AUDIENCE'] = None
+SIMPLE_JWT['ISSUER'] = None
+SIMPLE_JWT['JSON_ENCODER'] = None
+SIMPLE_JWT['JWK_URL'] = None
+SIMPLE_JWT['LEEWAY'] = 0
+SIMPLE_JWT['ALGORITHM'] = "HS256"
 
 CACHES['default']['LOCATION'] = "redis://127.0.0.1:6381/1"
 

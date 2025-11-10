@@ -122,3 +122,15 @@ STORAGES = {
 }
 
 CKEDITOR_5_FILE_STORAGE = STORAGES['default']['BACKEND']
+
+# SIMPLW JWT CONFIG
+SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'] = datetime.timedelta(minutes=60)
+SIMPLE_JWT['REFRESH_TOKEN_LIFETIME'] = datetime.timedelta(days=30)
+SIMPLE_JWT['VERIFYING_KEY'] = config("VERIFYING_KEY", cast=str)
+SIMPLE_JWT['SIGNING_KEY'] = config("SIGNING_KEY", cast=str)
+SIMPLE_JWT['AUDIENCE'] = config("AUDIENCE", cast=str)
+SIMPLE_JWT['ISSUER'] = config("ISSUER", cast=str)
+SIMPLE_JWT['JSON_ENCODER'] = config("JSON_ENCODER", cast=str)
+SIMPLE_JWT['JWK_URL'] = config("JWK_URL", cast=str)
+SIMPLE_JWT['LEEWAY'] = config("LEEWAY", cast=int, default=0)
+SIMPLE_JWT['ALGORITHM'] = config("ALGORITHM", cast=str, default="HS256")
