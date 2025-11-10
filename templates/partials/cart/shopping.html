@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block title %}
+<title>اطلاعات ارسال سبد خرید</title>
+{% endblock %} {% block content %}
+<div class="wrapper shopping-page" style="transform: none">
+  <header class="header-shopping dt-sl">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center pt-2">
+          <div class="header-shopping-logo dt-sl">
+            <a href="#">
+              <img src="/static/assets/img/logo.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <ul class="checkout-steps">
+            <li>
+              <a href="#" class="active">
+                <span>اطلاعات ارسال</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>پرداخت</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>اتمام خرید و ارسال</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class='main-content dt-sl mt-4 mb-3' style='transform: none;'>
+    <div class='container main-container' style='transform: none;'>
+        <div class='row' style='transform: none;'>
+            <div class='cart-page-content col-xl-9 col-lg-8 col-12 px-0'>
+                <div class='section-title text-sm-title title-wide no-after-title-wide mb-0 px-res-1'>
+                    <h2>انتخاب آدرس تحویل سفارش</h2>
+                </div>
+
+                <section class='page-content dt-sl'>
+                    {% include "partials/cart/address.html" %}
+                    {% include "partials/cart/cart.html" %}
+                </section>
+            </div>
+
+            {% include "partials/cart/cart-price.html" %}
+        </div>
+    </div>
+  </main>
+
+  {% include "partials/cart/cart-footer.html" %}
+</div>
+{% endblock %}

@@ -10,7 +10,8 @@ app_urls = [
     path("auth/", include("account_app.urls", namespace="auth_app")),
     path('core/', include("core_app.urls", namespace="core")),
     path("product/", include("product_app.urls", namespace="product_app")),
-    path("blog/", include("blog_app.urls", namespace="blog_app"))
+    path("blog/", include("blog_app.urls", namespace="blog_app")),
+    path("order/", include("order_app.urls", namespace='order_app'))
 ]
 
 
