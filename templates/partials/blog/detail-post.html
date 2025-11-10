@@ -1,0 +1,107 @@
+{% extends 'base.html' %} {% block title %}
+<title>جزئیات پست</title>
+{% endblock %} {% block content %}
+{% include "partials/header/header.html" %}
+<main
+  class="main-content dt-sl mb-3"
+  style="margin-top: 209.167px; transform: none"
+>
+  <div class="container main-container" style="transform: none">
+    {% comment %} category detail post {% endcomment %} 
+     {% include "partials/blog/detail-post-category.html" %}
+
+    <div class="row" style="transform: none">
+      <div class="col-lg-9 col-md-8 col-sm-12 col-12 mb-3">
+        <div class="content-page">
+          <div class="content-desc dt-sn dt-sl">
+            <header class="entry-header dt-sl mb-3">
+              <div class="post-meta date">
+                <i class="mdi mdi-calendar-month"></i>1397/09/21
+              </div>
+              <div class="post-meta author">
+                <i class="mdi mdi-account-circle-outline"></i>
+                ارسال شده توسط<a href="#">مدیریت</a>
+              </div>
+              <div class="post-meta category">
+                <i class="mdi mdi-folder"></i>
+                <a href="#">دسته‌بندی نشده</a> ،
+                <a href="#">کسب و کار آنلاین</a> ، <a href="#">معرفی کتاب</a>
+              </div>
+              <div class="post-meta category">
+                <i class="mdi mdi-eye"></i>
+                433 بازدید
+              </div>
+            </header>
+            <div class="post-thumbnail dt-sl">
+              <img src="/static/assets/img/post-thumbnail/291.jpg" alt="" />
+            </div>
+            <ul>
+              <li>
+                <strong
+                  >می‌خواهید قالب وردپرسی و ووکامرسی اختصاصی خودتان را
+                  بسازید؟</strong
+                >
+              </li>
+              <li>
+                <strong>می‌خواهید به عنوان طراح سایت کسب درآمد کنید؟</strong>
+              </li>
+              <li>
+                <strong
+                  >می‌خواهید قالب سایت خود را به صورت حرفه‌ای شخصی‌سازی
+                  کنید؟</strong
+                >
+              </li>
+            </ul>
+            <p>در دوره آموزش صفر تا صد دوره طراحی سایت:</p>
+            <ol>
+              <li>
+                یک ایده در ذهن داریم آن را با مداد یا خودکار روی کاغذ طراحی
+                می‌کنیم
+              </li>
+              <li>آن را با اصول طراحی سایت در فتوشاپ پیاده سازی می‌کنیم</li>
+              <li>
+                فایل‌های گرافیکی را با کدهای استاندارد CSS3 HTML5 به کد تبدیل
+                می‌کنیم (در حین یادگیری کدنویسی فریم ورک Bootstrap را نیز یاد
+                می‌گیرید که باعث می‌شود سایت یا فروشگاه شما علاوه بر دسکتاپ، با
+                تبلت و موبایل نیز سازگار باشد)
+              </li>
+              <li>
+                کدها را با رعایت اصول وردپرس به یک قالب هوشمند وردپرسی تبدیل
+                می‌کنیم
+              </li>
+              <li>در نهایت قالب خود را با ووکامرس سازگار می‌کنیم</li>
+            </ol>
+            <p>
+              با این آموزش می‌توانید هر نوع سایت خبری و فروشگاهی را با طراحی
+              اختصاصی خودتان راه‌اندازی کنید. علاوه بر این شما یاد می‌گیرد با
+              کمک بوت‌استرپ سایت خود را ریسپانسیو کنید تا بهترین نمایش را در
+              مویایل و تبلت داشته باشد.
+            </p>
+            <p>
+              این تمام ماجرا نیست. شاید شما بخواهید از قالب‌های حرفه‌ای خارجی
+              استفاده کنید. در این دوره شما یادمی‌گیرد که چطور قالب‌های حرفه‌ای
+              را فارسی‌سازی و راست‌چین کنید تا برای سایت‌های فارسی مناسب باشد.
+            </p>
+            <p>
+              <span style="color: #ff0000"
+                >با دیدن این دوره شما می‌توانید به عنوان یک طراح‌سایت و
+                توسعه‌دهنده front-end وردپرس کسب درآمد کنید</span
+              >، پس باید بدانید که چطور پروژه قبول کنید و با مشتریان خود قرارداد
+              ببندید. بخش پایانی این دوره مخصوص شما است تا بتوانید مثل یک طراح
+              حرفه‌ای قرارداد ببندید و با خیالی آسوده از تخصص خود کسب درآمد
+              کنید.
+            </p>
+          </div>
+        </div>
+
+        {% comment %} blog comment {% endcomment %}
+         {% include "partials/blog/detail-blog-comment.html" %}
+      </div>
+
+      {% comment %} newst blog post {% endcomment %}
+       {% include "partials/blog/newset_article.html" %}
+    </div>
+  </div>
+</main>
+{% include "partials/footer/footer.html" %}
+{% endblock %}
