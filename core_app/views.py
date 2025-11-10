@@ -8,3 +8,7 @@ class HeaderView(TemplateView):
 
 class FooterView(TemplateView):
     template_name = "partials/footer/footer.html"
+
+
+class HomeView(TemplateView):
+    template_name = "partials/main/main.html"

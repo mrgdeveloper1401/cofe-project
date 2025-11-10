@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>صفحه اصلی</title>
+{% endblock  %}
+
+{% block content %}
+    <div class='wrapper'>
+        {% include 'partials/header/header.html' %}
+        <div class='main-content dt-sl mb-3' style='margin-top: 209.167px;'>
+            {% include 'partials/main/slider.html' %}
+        </div>
+        {% include "partials/main/amazing.html" %}
+        {% include "partials/main/best-seller.html" %}
+        {% include "partials/main/blue-amazing.html" %}
+        {% include "partials/main/second-product-slider.html" %}
+        {% include 'partials/footer/footer.html' %}
+    </div>
+{% endblock  %}
