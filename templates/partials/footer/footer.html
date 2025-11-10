@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <footer class="main-footer dt-sl">
+        {% include "partials/footer/back-to-top.html" %}
+        <div class='container main-container'>
+            {% include "partials/footer/footer-services.html" %}
+            {% include "partials/footer/footer-widgets.html" %}
+            {% include "partials/footer/footer-info.html" %}
+        </div>
+        {% include "partials/footer/description.html" %}
+        {% include "partials/footer/copyright.html" %}
+    </footer>
+{% endblock  %}

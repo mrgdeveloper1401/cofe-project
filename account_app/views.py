@@ -48,3 +48,10 @@ class VerifyOypPhoneView(View):
 
     def post(self, request):
         pass
+
+
+class ProfileView(View):
+    template_name = "partials/profile/profile.html"
+
+    def get(self, request):
+        return render(request, self.template_name)

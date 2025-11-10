@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>حساب کاربری</title>
+{% endblock  %}
+
+{% block content %}
+    <div class='transform: none;'>
+        {% include 'partials/header/header.html' %}
+        <div class='wrapper'>
+            <main class='main-content dt-sl mb-3' style='margin-top: 209.167px; transform: none;'>
+                <div class='container main-container'>
+                    <div class='row' style='transform: none;'>
+                        {% comment %} sidebar {% endcomment %}
+                        {% include 'partials/profile/sidebar.html' %}
+
+                        <div class='col-xl-9 col-lg-8 col-md-8 col-sm-12'>
+                            <div class='row'>
+                                {% include 'partials/profile/content.html' %}
+                                {% include 'partials/profile/favorit.html' %}
+                            </div>
+                            {% include 'partials/profile/orders.html' %}
+                            {% include 'partials/profile/recomender.html' %}
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        {% include 'partials/footer/footer.html' %}
+    </div>
+{% endblock  %}

@@ -28,7 +28,7 @@
 </head>
 <body>
     {% block content %}{% endblock %}
-    
+    {% comment %} {% include 'inc/footer.html' %} {% endcomment %}
     <!-- Core JS Files -->
     <script src="{% static 'assets/js/vendor/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
