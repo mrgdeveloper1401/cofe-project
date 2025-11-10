@@ -8,3 +8,7 @@ class ShoppingView(TemplateView):
 
 class PaymentView(TemplateView):
     template_name = "partials/payment/payment.html"
+
+
+class UnsuccessflyPaymentView(TemplateView):
+    template_name = "partials/payment/unsuccess-payment.html"
