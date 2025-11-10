@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>وبلاگ</title>
+{% endblock  %}
+
+{% block content %}
+    {% include "partials/header/header.html" %}
+    {% include "partials/blog/list-post.html" %}
+    {% include "partials/footer/footer.html" %}
+{% endblock  %}

@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+
+class ListPostBlogView(TemplateView):
+    template_name = "partials/blog/blog.html"
