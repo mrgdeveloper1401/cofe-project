@@ -1,9 +1,10 @@
 from django.urls import path
 
-from .views import ShoppingView
+from .views import ShoppingView, PaymentView
 
 app_name = "order_app"
 
 urlpatterns = [
-    path("shopping/", ShoppingView.as_view(), name="shopping")
+    path("shopping/", ShoppingView.as_view(), name="shopping"),
+    path("payment/", PaymentView.as_view(), name='payment')
 ]
