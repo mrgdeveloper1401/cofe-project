@@ -14,10 +14,14 @@ core_urls = [
     path('core/', include("core_app.urls", namespace="core"))
 ]
 
+product_urls = [
+    path("product/", include("product_app.urls", namespace="product_app"))
+]
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
-] + auth_urls + core_urls
+] + auth_urls + core_urls + product_urls
 
 if SHOW_DEBUG_TOOLBAR:
     from debug_toolbar.toolbar import debug_toolbar_urls
