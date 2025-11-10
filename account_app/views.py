@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+from django.views.generic import TemplateView
 
 from account_app.forms import (
     LoginPasswordForm,
@@ -55,3 +56,7 @@ class ProfileView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+
+
+class WellcomeView(TemplateView):
+    template_name = "auth/wellcome.html"
