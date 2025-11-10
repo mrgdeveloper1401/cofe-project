@@ -12,3 +12,7 @@ class PaymentView(TemplateView):
 
 class UnsuccessflyPaymentView(TemplateView):
     template_name = "partials/payment/unsuccess-payment.html"
+
+
+class SuccessfltView(TemplateView):
+    template_name = "partials/payment/successfly.html"
