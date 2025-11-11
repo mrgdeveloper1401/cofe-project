@@ -12,3 +12,7 @@ class FooterView(TemplateView):
 
 class HomeView(TemplateView):
     template_name = "partials/main/main.html"
+
+
+class PrivacyView(TemplateView):
+    template_name = "partials/core/privacy.html"
