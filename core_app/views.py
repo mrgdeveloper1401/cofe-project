@@ -16,3 +16,7 @@ class HomeView(TemplateView):
 
 class PrivacyView(TemplateView):
     template_name = "partials/core/privacy.html"
+
+
+class QuestionView(TemplateView):
+    template_name = "partials/core/questions.html"

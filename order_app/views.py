@@ -16,3 +16,11 @@ class UnsuccessflyPaymentView(TemplateView):
 
 class SuccessfltView(TemplateView):
     template_name = "partials/payment/successfly.html"
+
+
+class ShoppingCartView(TemplateView):
+    template_name = "partials/cart/shopping-cart.html"
+
+
+class CartEmptyView(TemplateView):
+    template_name = "partials/cart/cart-empty.html"
