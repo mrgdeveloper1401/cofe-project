@@ -68,3 +68,7 @@ class PersonalProfileView(TemplateView):
 
 class ProfileOrderView(TemplateView):
     template_name = "partials/profile/profile-order.html"
+
+
+class ReturnOrderView(TemplateView):
+    template_name = "partials/profile/return-order.html"
