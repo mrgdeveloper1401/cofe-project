@@ -10,7 +10,8 @@ from .views import (
     ProfileOrderView,
     ReturnOrderView,
     SuccessOrderProfileView,
-    ProfileFavoritView
+    ProfileFavoritView,
+    ProfileAddressView
 )
 
 
@@ -27,5 +28,6 @@ urlpatterns = [
     path("profile-order/", ProfileOrderView.as_view(), name='profile-order'),
     path("return-order/", ReturnOrderView.as_view(), name='return-order'),
     path("success-profile/", SuccessOrderProfileView.as_view(), name='success-profile'),
-    path("profile-favorit/", ProfileFavoritView.as_view(), name='profile-favorit')
+    path("profile-favorit/", ProfileFavoritView.as_view(), name='profile-favorit'),
+    path("profile-address/", ProfileAddressView.as_view(), name='profile-address')
 ]

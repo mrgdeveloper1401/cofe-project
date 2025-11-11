@@ -80,3 +80,7 @@ class SuccessOrderProfileView(TemplateView):
 
 class ProfileFavoritView(TemplateView):
     template_name = "partials/profile/profile-favorit.html"
+
+
+class ProfileAddressView(TemplateView):
+    template_name = "partials/profile/profile-address.html"
