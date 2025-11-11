@@ -1,0 +1,184 @@
+{% extends 'base.html' %} {% block content %}
+<div
+  class="col-xl-3 col-lg-4 col-md-4 col-sm-12 sticky-sidebar"
+  style="
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+    min-height: 1px;
+  "
+>
+  <div
+    class="theiaStickySidebar"
+    style="
+      padding-top: 0px;
+      padding-bottom: 1px;
+      position: static;
+      transform: none;
+    "
+  >
+    <div class="profile-sidebar dt-sl">
+      <div class="dt-sl dt-sn border mb-3">
+        <div class="profile-sidebar-header dt-sl">
+          <div class="d-flex align-items-center">
+            <div class="profile-avatar">
+              <img src="/static/assets/img/theme/avatar.png" alt="" />
+            </div>
+            <div class="profile-header-content mr-3 mt-2">
+              <span class="d-block profile-username">جلال بهرامی راد</span>
+              <span class="d-block profile-phone">09xxxxxxxxx</span>
+            </div>
+          </div>
+          <div class="profile-point mt-3 mb-2 dt-sl">
+            <span class="label-profile-point">امتیاز شما:</span>
+            <span class="float-left value-profile-point">120</span>
+          </div>
+          <div class="profile-link mt-2 dt-sl">
+            <div class="row">
+              <div class="col-6 text-center">
+                <a href="#">
+                  <i class="mdi mdi-lock-reset"></i>
+                  <span class="d-block">تغییر رمز</span>
+                </a>
+              </div>
+              <div class="col-6 text-center">
+                <a href="#">
+                  <i class="mdi mdi-logout-variant"></i>
+                  <span class="d-block">خروج از حساب</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dt-sl dt-sn mb-3 text-center">
+        <a href="#">
+          <img
+            src="/static/assets/img/banner/sidebar-banner-3.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="dt-sl dt-sn border mb-3">
+        <div class="profile-menu-section dt-sl">
+          <div class="label-profile-menu mt-2 mb-2">
+            <span>حساب کاربری شما</span>
+          </div>
+          <div class="profile-menu">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-account-circle-outline"></i>
+                  پروفایل
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-basket"></i>
+                  همه سفارش ها
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-backburger"></i>
+                  درخواست مرجوعی
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-heart-outline"></i>
+                  لیست علاقمندی ها
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-glasses"></i>
+                  نقد و نظرات
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-sign-direction"></i>
+                  آدرس ها
+                </a>
+              </li>
+              <li>
+                <a href="#" class="active">
+                  <i class="mdi mdi-eye-outline"></i>
+                  بازدیدهای اخیر
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="mdi mdi-account-edit-outline"></i>
+                  اطلاعات شخصی
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="resize-sensor"
+      style="
+        position: absolute;
+        inset: 0px;
+        overflow: hidden;
+        z-index: -1;
+        visibility: hidden;
+      "
+    >
+      <div
+        class="resize-sensor-expand"
+        style="
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          overflow: hidden;
+          z-index: -1;
+          visibility: hidden;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition: all;
+            width: 360px;
+            height: 739px;
+          "
+        ></div>
+      </div>
+      <div
+        class="resize-sensor-shrink"
+        style="
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          overflow: hidden;
+          z-index: -1;
+          visibility: hidden;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 0s;
+            width: 200%;
+            height: 200%;
+          "
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

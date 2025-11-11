@@ -8,3 +8,7 @@ class DetailProductView(TemplateView):
 
 class ListProductView(TemplateView):
     template_name = "partials/product/search-product.html"
+
+
+class RecentVisitProfileView(TemplateView):
+    template_name = "partials/profile/recent-visit-product.html"
