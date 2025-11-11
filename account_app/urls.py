@@ -5,7 +5,8 @@ from .views import (
     RequestOtpPhoneView,
     VerifyOypPhoneView,
     ProfileView,
-    WellcomeView
+    WellcomeView,
+    PersonalProfileView
 )
 
 
@@ -17,5 +18,6 @@ urlpatterns = [
     path("request_otp_phone/", RequestOtpPhoneView.as_view(), name="request_otp_phone"),
     path("verify_otp_phone/", VerifyOypPhoneView.as_view(), name="verify_otp_phone"),
     path("profile/", ProfileView.as_view(), name="profile"),
+    path("personal-profile/", PersonalProfileView.as_view(), name='personal-profile'),
     path("wellcome/", WellcomeView.as_view(), name='wellcome'),
 ]

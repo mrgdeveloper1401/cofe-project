@@ -60,3 +60,7 @@ class ProfileView(View):
 
 class WellcomeView(TemplateView):
     template_name = "auth/wellcome.html"
+
+
+class PersonalProfileView(TemplateView):
+    template_name = "partials/profile/personal-profile.html"
