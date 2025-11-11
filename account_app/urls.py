@@ -9,7 +9,8 @@ from .views import (
     PersonalProfileView,
     ProfileOrderView,
     ReturnOrderView,
-    SuccessOrderProfileView
+    SuccessOrderProfileView,
+    ProfileFavoritView
 )
 
 
@@ -25,5 +26,6 @@ urlpatterns = [
     path("wellcome/", WellcomeView.as_view(), name='wellcome'),
     path("profile-order/", ProfileOrderView.as_view(), name='profile-order'),
     path("return-order/", ReturnOrderView.as_view(), name='return-order'),
-    path("success-profile/", SuccessOrderProfileView.as_view(), name='success-profile')
+    path("success-profile/", SuccessOrderProfileView.as_view(), name='success-profile'),
+    path("profile-favorit/", ProfileFavoritView.as_view(), name='profile-favorit')
 ]
