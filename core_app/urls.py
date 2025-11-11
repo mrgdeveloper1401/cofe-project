@@ -4,7 +4,8 @@ from .views import (
     FooterView, 
     HomeView, 
     PrivacyView,
-    QuestionView
+    QuestionView,
+    NotFoundView
 )
 
 app_name = "core_app"
@@ -15,5 +16,6 @@ urlpatterns = [
     path("footer/", FooterView.as_view(), name="footer"),
     path("main/", HomeView.as_view(), name='home'),
     path("privacy/", PrivacyView.as_view(), name='privacy'),
-    path("questions/", QuestionView.as_view(), name='question')
+    path("questions/", QuestionView.as_view(), name='question'),
+    path("not-found/", NotFoundView.as_view(), name="not-found")
 ]

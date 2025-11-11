@@ -20,3 +20,8 @@ class PrivacyView(TemplateView):
 
 class QuestionView(TemplateView):
     template_name = "partials/core/questions.html"
+
+
+class NotFoundView(TemplateView):
+    template_name = "partials/core/not_found.html"
+
