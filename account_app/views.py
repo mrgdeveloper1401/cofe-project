@@ -84,3 +84,7 @@ class ProfileFavoritView(TemplateView):
 
 class ProfileAddressView(TemplateView):
     template_name = "partials/profile/profile-address.html"
+
+
+class ProfileInformationView(TemplateView):
+    template_name = "partials/profile/profile-information.html"
