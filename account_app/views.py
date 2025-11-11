@@ -88,3 +88,7 @@ class ProfileAddressView(TemplateView):
 
 class ProfileInformationView(TemplateView):
     template_name = "partials/profile/profile-information.html"
+
+
+class ResetPasswordView(TemplateView):
+    template_name = "auth/reset-password.html"

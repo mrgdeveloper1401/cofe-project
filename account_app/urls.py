@@ -12,7 +12,8 @@ from .views import (
     SuccessOrderProfileView,
     ProfileFavoritView,
     ProfileAddressView,
-    ProfileInformationView
+    ProfileInformationView,
+    ResetPasswordView
 )
 
 
@@ -31,5 +32,6 @@ urlpatterns = [
     path("success-profile/", SuccessOrderProfileView.as_view(), name='success-profile'),
     path("profile-favorit/", ProfileFavoritView.as_view(), name='profile-favorit'),
     path("profile-address/", ProfileAddressView.as_view(), name='profile-address'),
-    path("profile-information/", ProfileInformationView.as_view(), name="profile-information")
+    path("profile-information/", ProfileInformationView.as_view(), name="profile-information"),
+    path("reset-password/", ResetPasswordView.as_view(), name='reset-password')
 ]
